@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Painel - Final</title>
+<style>
+body{font-family:Arial;background:#f0f0f0;margin:0;text-align:center}
+header{background:#111;color:white;padding:20px}
+.senha{font-size:80px;color:#007bff;font-weight:bold}
+.card{background:white;margin:15px;padding:20px;border-radius:10px}
+button{padding:10px 20px;font-size:16px;margin:5px;border-radius:8px}
+</style>
+</head>
+<body>
+<header><h1>PAINEL DE ATENDIMENTO</h1></header>
+<div class="card"><p>SENHA ATUAL</p><div class="senha">A-012</div><p>Guichê 03</p></div>
+<h2>Avisos</h2>
+<img id="foto" src="https://picsum.photos/600/200?1" width="90%"><br>
+<button onclick="mudar(-1)">⬅ Voltar</button>
+<button onclick="mudar(1)">Próximo ➡</button>
+<script>
+let i=1;
+function mudar(n){ i+=n; if(i>3)i=1; if(i<1)i=3;
+  document.getElementById('foto').src="https://picsum.photos/600/200?"+i; }
+setInterval(()=>mudar(1), 3000);
+</script>
+</body>
+</html>
